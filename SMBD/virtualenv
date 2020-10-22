@@ -1,0 +1,38 @@
+: 1602801623:0;tree
+: 1602801673:0;./manage.py startapp Tugas
+: 1602801682:0;tree
+: 1602802119:0;nano Tugas/models.py
+: 1602802982:0;nano SMBD/settings.py
+: 1602803019:0;nano Tugas/admin.py
+: 1602803091:0;./manage.py createsuperuser
+: 1602803100:0;nano Tugas/models.py
+: 1602803115:0;./manage.py createsuperuser
+: 1602803121:0;nano Tugas/models.py
+: 1602803153:0;tree
+: 1602803174:0;./manage.py migrate
+: 1602805298:0;./manage.py runserver 0.0.0.0:8000
+: 1602805444:0;./manage.py createsuperuser
+: 1602805515:0;./manage.py runserver 0.0.0.0:8000
+: 1602805745:0;nano SMBD/settings.py
+: 1602805950:0;./manage.py makemigrate
+: 1602805957:0;nano SMBD/settings.py
+: 1602805970:0;./manage.py makemigrate
+: 1602805986:0;pip install mysqlclient
+: 1602805999:0;./manage.py makemigrate
+: 1602806012:0;./manage.py makemigrations
+: 1602806028:0;./manage.py migrate
+: 1602806038:0;./manage.py runserver 0.0.0.0:8000
+: 1602806083:0;./manage.py createsuperuser
+: 1602806150:0;./manage.py runserver 0.0.0.0:8000
+: 1602806236:0;nano Tugas/models.py
+: 1602806280:0;./manage.py runserver 0.0.0.0:8000
+: 1602812788:0;../
+: 1602812893:0;tree
+: 1602812911:0;./manage.py runserver
+: 1602813429:0;./manage.py makemigrations
+: 1602813437:0;./manage.py runserver
+: 1602813499:0;./manage.py migrate
+: 1602813505:0;./manage.py runserver
+: 1602816551:0;tree
+: 1602816594:0;mkdir Tugas/templates
+: 1602849776:0;./manage.py runserver
