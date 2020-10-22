@@ -9,6 +9,7 @@
     1. aktifkan virtual environment hal ini dapat pengartasi banyak error. folder django adalah foldernya environment
     2. folder aplikasinya ada di SMBD
   c. melakukan push pada repositori
+    0. lakukan perintah "git commit -m 'apa yang diedit' "
     1. lakukan perintah "git push origin"
     2. kemudian isi username
     3. isi password github
