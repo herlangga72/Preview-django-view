@@ -22,7 +22,7 @@
     4. kemudian isi username
     5. isi password github
     6. tunggu hingga selesai
-##  langkah c2.4 dan 5 dapat di skip dengan menggunakan "git remote set-url origin https://<USERNAME>:<PASSWORD>@github.com/path/to/repo.git"
+##  langkah c2.4 dan 5 dapat di skip dengan menggunakan "git remote set-url origin https://[USERNAME]:[PASSWORD]@github.com/path/to/repo.git"
 ##  d. ketika akan mengerjakan usahakan selalu lakukan command "git pull"
 
 Link pendukung
