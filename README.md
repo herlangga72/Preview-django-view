@@ -18,3 +18,5 @@
 
 # Sekian terima kasih bila ada masalah bisa dicari di google dengan kata kunci
 ## cara clone github,cara melakukan push pada repositori, cara lakukan pull
+
+##ini tambahan
