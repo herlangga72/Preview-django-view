@@ -22,14 +22,14 @@
     4. kemudian isi username
     5. isi password github
     6. tunggu hingga selesai
-##  langkah c2.4 dan 5 dapat di skip dengan menggunakan "git remote set-url origin https://[USERNAME]:[PASSWORD]@github.com/path/to/repo.git"
+##  langkah c2.4 dan 5 dapat di skip dengan menggunakan "git remote set-url origin https://[USERNAME]:[PASSWORD]@github.com/herlangga72/SMBD"
 ##  d. ketika akan mengerjakan usahakan selalu lakukan command "git pull"
 
-Link pendukung
-https://www.shellhacks.com/git-config-username-password-store-credentials/ (skip langkah c2 4 dan 5)
-https://www.liquidweb.com/kb/how-to-setup-a-python-virtual-environment-on-windows-10/
-https://www.instructables.com/How-to-Setup-and-Commit-to-a-Git-Repository/ 
-https://readwrite.com/2013/10/02/github-for-beginners-part-2/
+## Link pendukung
+1. https://www.shellhacks.com/git-config-username-password-store-credentials/ (skip langkah c2 4 dan 5)
+2. https://www.liquidweb.com/kb/how-to-setup-a-python-virtual-environment-on-windows-10/
+3. https://www.instructables.com/How-to-Setup-and-Commit-to-a-Git-Repository/ 
+4. https://readwrite.com/2013/10/02/github-for-beginners-part-2/
 
 # Sekian terima kasih bila ada masalah bisa dicari di google dengan kata kunci
 ## cara clone github,cara melakukan push pada repositori, cara lakukan pull
