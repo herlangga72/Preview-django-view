@@ -2,21 +2,35 @@
   Kerjaan Kelompok
 # pre-requirement
   1. Python 3.8
-  2. pasang aplikasi github atau git
+  2. pasang aplikasi git
 # Cara Pakai
-##  a. download melalui git dengan perintah "git clone https://github.com/herlangga72/SMBD/"
-##  b. launch program 
-    1. aktifkan virtual environment hal ini dapat pengartasi banyak error. folder django adalah foldernya environment
+	semua perintah ditulis di powershell
+##  a. download melalui git dengan perintah "git clone https://github.com/herlangga72/SMBD/" semua file akan terimpan difolder SMBD
+##	 b. beritahukan alamat github anda agar ditambah ke list kolaborator
+##  c. launch program
+    1. aktifkan virtual environment hal ini dapat mengartasi banyak error. folder django adalah foldernya environment.
+    		bila menggunakan windows 
+    		i. buka folder SMBD melalui powershell lalu ketik "django\bin\activate.ps1"
     2. folder aplikasinya ada di SMBD
-##  c. melakukan push pada repositori
-    0. lakukan perintah "git commit -m 'apa yang diedit' "
-    1. lakukan perintah "git push origin"
-    2. kemudian isi username
-    3. isi password github
-    4. tunggu hingga selesai
-##  d. ketika akan mengerjakan usahakan selalu lakukan command "git pull" 
+## c1. setting git
+	a. gunakan perintah "git config --global user.name <nama username anda di github>"
+	b. gunakan perintah "git config --global user.email <email anda di github>"
+
+## c2. melakukan push pada repositori
+    1. lakukan perintah "git commit -m 'apa yang diedit' "
+    2. perintah "git add *"
+    3. lakukan perintah "git push"
+    4. kemudian isi username
+    5. isi password github
+    6. tunggu hingga selesai
+##  langkah c2.4 dan 5 dapat di skip dengan menggunakan "git remote set-url origin https://<USERNAME>:<PASSWORD>@github.com/path/to/repo.git"
+##  d. ketika akan mengerjakan usahakan selalu lakukan command "git pull"
+
+Link pendukung
+https://www.shellhacks.com/git-config-username-password-store-credentials/ (skip langkah c2 4 dan 5)
+https://www.liquidweb.com/kb/how-to-setup-a-python-virtual-environment-on-windows-10/
+https://www.instructables.com/How-to-Setup-and-Commit-to-a-Git-Repository/ 
+https://readwrite.com/2013/10/02/github-for-beginners-part-2/
 
 # Sekian terima kasih bila ada masalah bisa dicari di google dengan kata kunci
 ## cara clone github,cara melakukan push pada repositori, cara lakukan pull
-
-##ini tambahan
