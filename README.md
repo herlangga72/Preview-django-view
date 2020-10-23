@@ -15,10 +15,9 @@
 ## c1. setting git
 	a. gunakan perintah "git config --global user.name <nama username anda di github>"
 	b. gunakan perintah "git config --global user.email <email anda di github>"
-
-## c2. melakukan push pada repositori
-    1. lakukan perintah "git commit -m 'apa yang diedit' "
-    2. perintah "git add *"
+## c2. melakukan push pada repositori. lakukan hal ini ketika telah mengubah di repo ini 
+    1. perintah "git add *"
+    2. lakukan perintah "git commit -m 'apa yang diedit' "
     3. lakukan perintah "git push"
     4. kemudian isi username
     5. isi password github
