@@ -1,5 +1,5 @@
 from django.db import models
-
+from datetime import date
 # Create your models here.
 
 class karyawan(models.Model):
@@ -22,7 +22,7 @@ class mengemas(models.Model):
 	nomor		= models.ForeignKey(karyawan, on_delete=models.CASCADE)
 	jumlah	= models.IntegerField()
 	bonus		= models.IntegerField()
-	tgl_kemas= models.DateField()
+	tgl_kemas= models.DateField(default=date.today)
 	def __str__(self):
 			return self.kode
 
