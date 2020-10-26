@@ -8,10 +8,20 @@
   <body>
     <h1>Testing multiple output as a Table</h1>
     <table border=2>
-      <th>nomer</th>
-      <th>nama</th>
-      <th>alamat</th>
-      <th>tgl_masuk</th>
+      <tr>
+        <th>nomer</th>
+        <th>nama</th>
+        <th>alamat</th>
+        <th>tgl_masuk</th>
+      </tr>
+      {% for data in serialized_data %}
+      <tr>
+        <td>{{data.nomer}}</td>
+        <td>{{data.nama}}</td>
+        <td>{{data.alamat}}</td>
+        <td>{{data.tgl_masuk}}</td>
+      </tr>
+      {% endfor %}
     </table>
   </body>
 
