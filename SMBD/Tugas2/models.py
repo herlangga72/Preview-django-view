@@ -6,7 +6,7 @@ class karyawan(models.Model):
 	nomer			= models.IntegerField(primary_key=True)
 	nama			= models.CharField(max_length=50)
 	alamat		= models.CharField(max_length=50)
-	tgl_masuk	= models.CharField(max_length=50)
+	tgl_masuk	= models.DateField(default=date.today)
 	def __str__(self):
 			return self.nama
 
