@@ -13,13 +13,22 @@
           <th>{{ column }}</th>
         {% endfor %}
       </tr>
-      {% if title == "Karyawan Order By Time333333333333"%}
+      {% if title == "Karyawan Order By Time"%}
         {% for data in serialized_data %}
           <tr>
             <td>{{data.nomer}}</td>
             <td>{{data.nama}}</td>
             <td>{{data.alamat}}</td>
             <td>{{data.tgl_masuk}}</td>
+          </tr>
+        {% endfor %}
+      {% endif %}      
+      
+      {% if title == "Product Supply"%}
+        {% for data in serialized_data %}
+          <tr>
+            <td>{{data.nama}}</td>
+            <td>{{data.jumlah}}</td>
           </tr>
         {% endfor %}
       {% endif %}

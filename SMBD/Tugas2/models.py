@@ -8,14 +8,14 @@ class karyawan(models.Model):
 	alamat		= models.CharField(max_length=50)
 	tgl_masuk	= models.DateField(default=date.today)
 	def __str__(self):
-			return self.nama
+			return str(self.nama)
 
 class produk(models.Model):
 	kode							= models.CharField(max_length=50,primary_key=True)
 	nama							= models.CharField(max_length=50)
 	honor_pengemasan	= models.IntegerField()
 	def __str__(self):
-			return self.nama
+			return str(self.nama)
 
 class mengemas(models.Model):
 	kode		= models.ForeignKey(produk, on_delete=models.CASCADE)
@@ -24,5 +24,5 @@ class mengemas(models.Model):
 	bonus		= models.IntegerField()
 	tgl_kemas= models.DateField(default=date.today)
 	def __str__(self):
-			return self.kode
+			return str(self.kode)
 
