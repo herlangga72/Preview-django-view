@@ -5,8 +5,6 @@ from .models import *
 def karyawan_all(request):
   judul = "Karyawan Order By Time"
   kolom = ["nomer","nama","alamat","tanggal masuk"]
-  fetched_data = karyawan.objects.order_by('tgl_masuk')
+  fetched_data = karyawan.objects.order_by("tgl_masuk")
   context = dict(serialized_data=fetched_data,title=judul,column_name=kolom)
   return render(request, 'index.html', context)
-
-  

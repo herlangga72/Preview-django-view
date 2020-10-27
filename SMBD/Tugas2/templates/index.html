@@ -9,18 +9,18 @@
     <h1>Outputing Data {{title}} to table</h1>
     <table border=2>
       <tr>
-      {% for column in column_name %}
-        <th>{{ column }}</th>
-      {% endfor %}
+        {% for column in column_name %}
+          <th>{{ column }}</th>
+        {% endfor %}
       </tr>
-      {% if title == "karyawan"%}
+      {% if title == "Karyawan Order By Time333333333333"%}
         {% for data in serialized_data %}
-        <tr>
-          <td>{{data.nomer}}</td>
-          <td>{{data.nama}}</td>
-          <td>{{data.alamat}}</td>
-          <td>{{data.tgl_masuk}}</td>
-        </tr>
+          <tr>
+            <td>{{data.nomer}}</td>
+            <td>{{data.nama}}</td>
+            <td>{{data.alamat}}</td>
+            <td>{{data.tgl_masuk}}</td>
+          </tr>
         {% endfor %}
       {% endif %}
     </table>

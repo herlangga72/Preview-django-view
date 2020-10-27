@@ -11,6 +11,7 @@ class karyawanAdmin(admin.ModelAdmin):
 class produkAdmin(admin.ModelAdmin):
   list_display=("kode","nama", "honor_pengemasan")
   search_fields=['nama']
+  
 @admin.register(mengemas)
 class mengemasAdmin(admin.ModelAdmin):
   list_display=("kode","nomor","jumlah","bonus","tgl_kemas" )
