@@ -32,6 +32,19 @@
           </tr>
         {% endfor %}
       {% endif %}
+
+      {% if title == "Barang yang dibungkus Hari ini"%}
+        {% for data in serialized_data %}
+          <tr>
+            <td>{{data.nama}}</td>
+            <td>
+            {% for object in data.type %}
+              {{object}},
+            {% endfor %}
+            </td>
+          </tr>
+        {% endfor %}
+      {% endif %}
     </table>
   </body>
 

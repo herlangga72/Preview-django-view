@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.db.models import Sum
-# Create your views here.
+from datetime import datetime
 from .models import *
+# Create your views here.
 def karyawan_all(request):
   judul = "Karyawan Order By Time"
   kolom = ["nomer","nama","alamat","tanggal masuk"]
@@ -15,8 +16,23 @@ def product_counter(request):
   data = list()
   #reconstuct data
   for product in product_stacks:
-    a = mengemas.objects.filter(kode=product.kode)
-    a= a.aggregate(Sum("jumlah"))['jumlah__sum']
-    data.append({'nama':product.nama,'jumlah':a})
+    temp = mengemas.objects.filter(kode=product.kode).aggregate(Sum("jumlah"))['jumlah__sum']
+    data.append({'nama':product.nama,'jumlah':temp})
   context = dict(serialized_data=data,title=judul,column_name=kolom)
   return render(request, 'index.html', context)
+
+def karyawan_works_on(request):
+  judul = "Barang yang dibungkus Hari ini"
+  kolom = ["nama","list barang"]
+  workers=karyawan.objects.all()
+  data = list()
+  #reconstuct data
+  for worker in workers:
+    temp = mengemas.objects.filter(tgl_kemas=datetime.now().date()).filter(nomor=worker.nomer)
+    data.append({'nama':worker.nama,'type':temp})
+  context = dict(serialized_data=data,title=judul,column_name=kolom)
+  return render(request, 'index.html', context)
+
+def testing(request):
+  return render(request, 'index.html')
+
