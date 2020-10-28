@@ -26,10 +26,19 @@
         {% endfor %}
       {% endif %}      
       
-      {% if title == "Product Supply" or "Bonus Karyawan bulan ini"%}
+      {% if title == "Product Supply"%}
         {% for data in serialized_data %}
           <tr>
-            <td>{{data.nama}}</td>
+            <td>{{data.kode__nama}}</td>
+            <td>{{data.jumlah}}</td>
+          </tr>
+        {% endfor %}
+      {% endif %}
+
+      {% if title == "Bonus Karyawan bulan ini"%}
+        {% for data in serialized_data %}
+          <tr>
+            <td>{{data.nomor__nama}}</td>
             <td>{{data.jumlah}}</td>
           </tr>
         {% endfor %}
