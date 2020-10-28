@@ -43,6 +43,19 @@ def karyawan_works_on(request):
   return render(request, 'index.html', context)
 
 
+def Bonus_bulanan(request):
+  judul = "Bonus Karyawan bulan ini"
+  kolom = ["nama","bonus"]
+  #ambil data mengemas dan juga filter berdasar bulan ini
+  workers=karyawan.objects.all()
+  data = list()
+  #reconstuct data
+  for worker in workers:
+    bonus_one_month= mengemas.objects.filter(tgl_kemas__month=datetime.now().month).filter(nomor=worker.nomer).aggregate(Sum("bonus"))['bonus__sum']
+    data.append({'nama':worker.nama, 'jumlah':bonus_one_month})
+  context = dict(serialized_data=data,title=judul,column_name=kolom)
+  return render(request, 'index.html', context)
+
 def testing(request):
   judul = "Bonus Karyawan bulan ini"
   kolom = ["nama","bonus"]

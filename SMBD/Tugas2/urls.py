@@ -4,5 +4,6 @@ urlpatterns = [
     path('karyawan', karyawan_all),
     path('Product_stocks', product_counter),
     path('Testing', testing),
+    path('Bonus_In_This_Month', Bonus_bulanan),
     path('karyawan_works_today', karyawan_works_on)
 ]
