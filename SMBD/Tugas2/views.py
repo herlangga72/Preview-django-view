@@ -3,12 +3,14 @@ from django.db.models import Sum
 from datetime import datetime
 from .models import *
 # Create your views here.
+
 def karyawan_all(request):
   judul = "Karyawan Order By Time"
   kolom = ["nomer","nama","alamat","tanggal masuk"]
   fetched_data = karyawan.objects.order_by("tgl_masuk")
   context = dict(serialized_data=fetched_data,title=judul,column_name=kolom)
   return render(request, 'index.html', context)
+
 def product_counter(request):
   #yg ini buat atur halaman
   judul = "Product Supply"
@@ -40,6 +42,16 @@ def karyawan_works_on(request):
   context = dict(serialized_data=data,title=judul,column_name=kolom)
   return render(request, 'index.html', context)
 
-def testing(request):
-  return render(request, 'index.html')
 
+def testing(request):
+  judul = "Bonus Karyawan bulan ini"
+  kolom = ["nama","bonus"]
+  #ambil data mengemas dan juga filter berdasar bulan ini
+  workers=karyawan.objects.all()
+  data = list()
+  #reconstuct data
+  for worker in workers:
+    bonus_one_month= mengemas.objects.filter(tgl_kemas__month=datetime.now().month).filter(nomor=worker.nomer).aggregate(Sum("bonus"))['bonus__sum']
+    data.append({'nama':worker.nama, 'jumlah':bonus_one_month})
+  context = dict(serialized_data=data,title=judul,column_name=kolom)
+  return render(request, 'index.html', context)

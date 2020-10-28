@@ -8,11 +8,13 @@
   <body>
     <h1>Outputing Data {{title}} to table</h1>
     <table border=2>
+
       <tr>
         {% for column in column_name %}
           <th>{{ column }}</th>
         {% endfor %}
       </tr>
+
       {% if title == "Karyawan Order By Time"%}
         {% for data in serialized_data %}
           <tr>
@@ -24,7 +26,7 @@
         {% endfor %}
       {% endif %}      
       
-      {% if title == "Product Supply"%}
+      {% if title == "Product Supply" or "Bonus Karyawan bulan ini"%}
         {% for data in serialized_data %}
           <tr>
             <td>{{data.nama}}</td>
