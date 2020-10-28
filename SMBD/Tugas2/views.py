@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.db.models import Sum
 from datetime import datetime
 from .models import *
-# Create your views here.
 
 def karyawan_all(request):
   judul = "Karyawan Order By Time"
@@ -29,7 +28,6 @@ def karyawan_works_on(request):
   context = dict(serialized_data=data,title=judul,column_name=kolom)
   return render(request, 'index.html', context)
 
-
 def Bonus_bulanan(request):
   judul = "Bonus Karyawan bulan ini"
   kolom = ["nama","bonus"]
@@ -38,14 +36,10 @@ def Bonus_bulanan(request):
   return render(request, 'index.html', context)
 
 def testing(request):
-  judul = "Bonus Karyawan bulan ini"
-  kolom = ["nama","bonus"]
-  #ambil data mengemas dan juga filter berdasar bulan ini
-  workers=karyawan.objects.all()
-  data = list()
-  #reconstuct data
-  for worker in workers:
-    bonus_one_month= mengemas.objects.filter(tgl_kemas__month=datetime.now().month).filter(nomor=worker.nomer).aggregate(Sum("bonus"))['bonus__sum']
-    data.append({'nama':worker.nama, 'jumlah':bonus_one_month})
+  judul = "testing"
+  kolom = ["nama","item","jumlah"]
+  data = mengemas.objects.values("nomor__nama","kode__nama").filter(tgl_kemas__month=datetime.now().month).annotate(hasil=Sum("jumlah")).order_by("nomor__nama")
   context = dict(serialized_data=data,title=judul,column_name=kolom)
   return render(request, 'index.html', context)
+
+#daftar nama karyawan, nama produk dan jumlah produk yang dikemas di bulan ini

@@ -56,6 +56,16 @@
           </tr>
         {% endfor %}
       {% endif %}
+
+      {% if title == "testing" %}
+        {% for data in serialized_data %}
+          <tr>
+            <td>{{data.nomor__nama}}
+            <td>{{data.kode__nama}}</td>
+            <td>{{data.hasil}}</td>
+          </tr>
+        {% endfor %}
+      {% endif %}
     </table>
   </body>
 
