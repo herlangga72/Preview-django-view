@@ -35,8 +35,8 @@ def Bonus_bulanan(request):
   context = dict(serialized_data=data,title=judul,column_name=kolom)
   return render(request, 'index.html', context)
 
-def testing(request):
-  judul = "testing"
+def gt_krywn_prf_mth(request):
+  judul = ""
   kolom = ["nama","item","jumlah"]
   data = mengemas.objects.values("nomor__nama","kode__nama").filter(tgl_kemas__month=datetime.now().month).annotate(hasil=Sum("jumlah")).order_by("nomor__nama")
   context = dict(serialized_data=data,title=judul,column_name=kolom)
